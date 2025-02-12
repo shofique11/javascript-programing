@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        class person{
+            constructor(name){
+                this.name = name;
+            }
+            toString(){
+                return this.name;
+            }
+        }
+        class student extends person{
+            constructor(name, id){
+                super(name);
+                this.id = id;
+            }
+            toString(){
+                return super.toString() + " " + this.id;
+            }
+        }
+        student1 = new student("Shofique", 1);
+        student2 = new student("Shahariar", 2);
+        console.log(student1.toString());
+        console.log(student2.name);
+    </script>
+</body>
+</html>

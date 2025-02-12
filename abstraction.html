@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        function person(fname, lanme){
+            this.fname = fname;
+            this.lname = lanme;
+
+            let get_details_no_access = function(){
+                return this.fname + " " + this.lname;
+            }
+            this.get_details_no_access = get_details_no_access;
+        }
+        let person1 = new person("Shofique", "Shahariar");
+        console.log(person1.fname);
+        console.log(person1.get_details_no_access());
+    </script>
+</body>
+</html>

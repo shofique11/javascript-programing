@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        class person{
+            constructor(name, id)
+            {
+                this.name = name;
+                this.id = id;
+            }
+            add_address(add)
+            {
+                this.add = add;
+            }   
+            get_name()
+            {
+                return this.name;
+            }
+            getDetails()
+            {
+                return this.name + " " + this.id + " " + this.add;
+            }
+        }
+        let person1 = new person("Shofique Shahariar", 123);
+        console.log(person1.add_address("Dhaka, Bangladesh"));
+        console.log(person1.get_name());
+        console.log(person1.getDetails());
+    </script>
+</body>
+</html>
