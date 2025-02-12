@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        class employee{
+            constructor(name, age, designation, salary){
+                this.name = name;
+                this.age = age;
+                this.designation = designation;
+                this.salary = salary;
+            }
+             obj2(){
+                return this.name + ' is ' + this.age + ' years old and works as a ' + this.designation;
+            }
+        }
+        let employee1 = new employee("Shofique",34,"Software Engineer", 50000);
+        let employee2 = new employee("Rasel", 24, "Web Developer", 30000);
+        employee1.department = "IT";
+        employee1.obj = function(){
+            return this.name + ' is ' + this.age + ' years old and works as a ' + this.designation + ' in ' + this.department + ' department';
+        }
+        console.log(employee1.obj());
+        console.log(employee2.obj2());
+    </script>
+</body>
+</html>

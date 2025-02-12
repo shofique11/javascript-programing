@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        function person(name,age, id){
+            this.name = name;
+            this.age = age;
+            this.id = id;
+        }
+        console.log(person.prototype);
+        person.prototype.obj = function(){
+            return this.name + ' is ' + this.age + ' years old';
+        }
+        console.log(person.prototype);
+        let person1 = new person('John', 25, 1);
+        console.log(person1.obj());
+        let person2 = new person('Shofique', 24, 2);
+        console.log(person2.obj());
+        console.log(person1);
+        console.log(person2)
+    </script>
+</body>
+</html>

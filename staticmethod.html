@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+       class MathUtills{
+        constructor(name){
+           this.name = name;
+        }
+        static add(a,b){
+            return a+b;
+        }
+        static multiply(a,b){
+            return a*b;
+        }
+        mymethod = function(){
+            return 'Hello';
+        }
+       }
+       console.log(MathUtills.add(5,5));
+       console.log(MathUtills.multiply(5,5));
+
+       class Validator{
+           static isEmail(email){
+               return /\S+@\S+\.\S+/.test(email);
+           }
+           static isPhone(phone){
+               return /^01[0-9]{9}$/.test(phone);
+           }
+           static isArray(arr){
+               return Array.isArray(arr);
+           }
+       }
+         console.log(Validator.isEmail('mislam@gmail.com'));
+         console.log(Validator.isPhone('01712345678'));
+         console.log(Validator.isArray([1,2,3,4,5]));
+         
+         // Static method factory pattern
+         class User{
+            constructor(name, email){
+                this.name = name;
+                this.email = email;
+            }
+            static register(name, email){
+                return new User(name, email);
+            }
+         }
+         let user1 = new User('shofique','shofique@gmail.com');
+         console.log(user1);
+         console.log(User.register('shofique','abc@gmail.com'));
+         console.log(user1.name);
+        // static method signleton pattern
+        class Singleton{
+            static instance = null;
+            constructor(name){
+                if(Singleton.instance){
+                    return Singleton.instance;
+                }
+                this.name = name;
+                Singleton.instance = this;
+            }
+        }
+        let s1 = new Singleton('shofique');
+        let s2 = new Singleton('rasel');
+        console.log(s1);
+        console.log(s2);
+        console.log(s1 === s2);
+        console.log(Singleton.instance);
+    </script>
+</body>
+</html>

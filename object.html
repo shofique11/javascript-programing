@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        function person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.obj2 = function(){
+                return this.name + ' is ' + this.age + ' years old';
+            }
+        }
+            let person1 = new person('John', 25);
+            let person2 = new person('Shofique', 24);
+            console.log(person1);
+            console.log(person2.name);
+            console.log(person1.obj2());
+            person1.obj= function(){
+                return this.name + ' is ' + this.age + ' years old';
+            }
+            console.log(person1.obj());
+            let friend = {};
+            friend.name = 'Rasel';
+            friend.age = 24;
+            console.log(friend);
+            friend['obj'] = function(){
+                return this.name + ' is ' + this.age + ' years old';
+            }
+            console.log(friend.obj());
+            friend.obj2 = function(){
+                return this.name + ' is ' + this.age + ' years old';
+            }
+            console.log(friend.obj2());
+    </script>
+</body>
+</html>
